@@ -1,3 +1,4 @@
+/*header och footer*/
 body{
     width: 100vw;
     height: 100vh;
@@ -59,6 +60,7 @@ h1{
     background-color: rgb(100,100,100)
 }*/
 
+
 article{
     grid-row: 2 / 8;
     grid-column: 1 / 4;
@@ -70,10 +72,20 @@ article{
 footer{
     grid-column: span 4;
     grid-row: 8 / 9;
-
+    z-index: 4;
     background-image: url(../img/dirtblock.png)
 }
+/*Hemsida*/
 
+header.home{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    font-family: Anton;
+    font-size: 25px;
+    padding: 0px;
+    text-align: center;
+    margin: auto;
+}
 a.store{
     grid-column: 2 / 3;
     grid-row: 3 / 4;    
@@ -118,6 +130,13 @@ a.store{
     outline: none;
 }
 
+.box2:focus{
+    background-color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/*Butik*/
 div.store{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(8,1fr);
@@ -158,24 +177,24 @@ header.store{
 }
 
 .block1, .block2, .block3, .block4{
-    background-image: url('../img/blockstylesheet.png');
+    background-image: url('../img/css_sprites.png');
     background-repeat: no-repeat;
     margin: auto;
-    text-align center;
 }
 
 .block1{
     grid-column: 1 / 2;
     grid-row: 2 / 4;
     width: 100px; height: 90px;
-    background-position: -10px -10px;
+    background: url('../img/css_sprites.png') -10px -10px;
+
 }
     
 .block2{
     grid-column: 2 / 3;
     grid-row: 2 / 4;
     width: 100px; height: 90px;
-    background: url('../img/blockstylesheet.png') -130px -10px;
+    background: url('../img/css_sprites.png') -130px -10px;
 
 }
 
@@ -183,7 +202,7 @@ header.store{
     grid-column: 1 / 2;
     grid-row: 5 / 7;
     width: 100px; height: 90px;
-    background: url('../img/blockstylesheet.png') -10px -120px;
+    background: url('../img/css_sprites.png') -10px -120px;
 
 }
 
@@ -191,6 +210,102 @@ header.store{
     grid-column: 2 / 3;
     grid-row: 5 / 7;
     width: 100px; height: 90px;
-    background: url('../img/blockstylesheet.png') -130px -120px;
+    background: url('../img/css_sprites.png') -130px -120px;
 
 }
+
+.grass{
+    grid-column: 1 / 2;
+    grid-row: 4 / 5; 
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.cobble{
+    grid-column: 2 / 3;
+    grid-row: 4 / 5; 
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.brick{
+    grid-column: 1 / 2;
+    grid-row: 7 / 8; 
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.log{
+    grid-column: 2 / 3;
+    grid-row: 7 / 8; 
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.button{
+    background-color: green;
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+    border: 2px, black,solid;
+    border-radius: 5px;
+    box-shadow: 1px 1px #999;
+    cursor: pointer;
+    outline: none;
+}
+
+/*Köpsidor*/
+
+div.picturegrass{
+    grid-column: 1 / 4;
+    grid-row: 2 / 6;
+    background-image: url(../img/grassbuy.png);
+    background-position: center;
+}
+
+div.picturecobble{
+    grid-column: 1 / 4;
+    grid-row: 2 / 6;
+    background-image: url(../img/cobblebuy.png);
+    background-position: center;
+}
+
+div.picturebrick{
+    grid-column: 1 / 4;
+    grid-row: 2 / 6;
+    background-image: url(../img/brickbuy.png);
+    background-position: center;
+}
+
+div.picturelog{
+    grid-column: 1 / 4;
+    grid-row: 2 / 6;
+    background-image: url(../img/logbuy.png);
+    background-position: center;
+}
+div.buyblock{
+    grid-column: 1 / 4;
+    grid-row: 6 / 11;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    display: grid;
+}
+
+p{
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+}
+
+button.buy{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 8em;
+    height: 3em;
+    margin: auto;
+    background-color: green;
+    border-radius: 5px;
+    box-shadow: 1px 1px #999;
+    cursor: pointer;
+    outline: none;
+}
+
